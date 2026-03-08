@@ -1,13 +1,13 @@
 {
   "functions": {
     "api/**/*.php": {
-      "runtime": "vercel-php@0.6.0"
+      "runtime": "vercel-php@0.7.2"
     }
   },
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api/index.php"
-    }
+    { "src": "/assets/(.*)",         "dest": "/assets/$1" },
+    { "src": "/process.php",         "dest": "/api/process.php" },
+    { "src": "/pages/dashboard.php", "dest": "/api/pages/dashboard.php" },
+    { "src": "/(.*)",                "dest": "/api/index.php" }
   ]
 }
