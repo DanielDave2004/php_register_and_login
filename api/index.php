@@ -3,7 +3,7 @@ session_start();
 
 // Already logged in? Go to dashboard
 if (isset($_SESSION['username'])) {
-    header('Location: pages/dashboard.php');
+    header('Location: /pages/dashboard.php');
     exit;
 }
 
@@ -18,7 +18,7 @@ $error = $_GET['error'] ?? '';
     <title>McDollibee</title>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800;900&family=Boogaloo&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="/assets/css/style.css"/>
 </head>
 <body>
 
@@ -27,7 +27,7 @@ $error = $_GET['error'] ?? '';
     ══════════════════════════════════════ -->
     <nav class="navbar">
         <div class="nav-brand">
-            <img src="assets/mcdolibee_logo.png" alt="McDollibee Logo" class="nav-logo"/>
+            <img src="/assets/mcdolibee_logo.png" alt="McDollibee Logo" class="nav-logo"/>
             <span class="brand-text">Mc<span class="brand-yellow">Dollibee</span></span>
         </div>
         <ul class="nav-links">
@@ -94,7 +94,7 @@ $error = $_GET['error'] ?? '';
         </div>
         <div class="hero-image">
             <div class="hero-glow"></div>
-            <img src="assets/burger.png" alt="Burger" class="hero-burger"/>
+            <img src="/assets/burger.png" alt="Burger" class="hero-burger"/>
         </div>
     </section>
 
@@ -111,7 +111,7 @@ $error = $_GET['error'] ?? '';
 
             <div class="menu-card reveal">
                 <div class="menu-img-wrap">
-                    <img src="assets/burger.png" alt="Burger"/>
+                    <img src="/assets/burger.png" alt="Burger"/>
                 </div>
                 <h3>Burger</h3>
                 <p>Double smashed beef patty, special sauce, pickles, onion rings.</p>
@@ -123,7 +123,7 @@ $error = $_GET['error'] ?? '';
 
             <div class="menu-card reveal">
                 <div class="menu-img-wrap">
-                    <img src="assets/chicken.png" alt="Chicken"/>
+                    <img src="/assets/chicken.png" alt="Chicken"/>
                 </div>
                 <h3>Chicken</h3>
                 <p>Extra super crispy fried chicken thigh, honey sriracha glaze, coleslaw.</p>
@@ -135,7 +135,7 @@ $error = $_GET['error'] ?? '';
 
             <div class="menu-card reveal">
                 <div class="menu-img-wrap">
-                    <img src="assets/pizza.png" alt="Pizza"/>
+                    <img src="/assets/pizza.png" alt="Pizza"/>
                 </div>
                 <h3>Pizza</h3>
                 <p>Thin crust pizza with rich tomato sauce, melted mozzarella, and fresh basil.</p>
@@ -147,7 +147,7 @@ $error = $_GET['error'] ?? '';
 
             <div class="menu-card reveal">
                 <div class="menu-img-wrap">
-                    <img src="assets/fries.png" alt="Fries"/>
+                    <img src="/assets/fries.png" alt="Fries"/>
                 </div>
                 <h3>Fries</h3>
                 <p>XL seasoned fries topped with cheese sauce and crispy bacon bits.</p>
@@ -165,7 +165,7 @@ $error = $_GET['error'] ?? '';
     ══════════════════════════════════════ -->
     <section id="about" class="section about-section">
         <div class="about-logo reveal">
-            <img src="assets/mcdolibee_logo.png" alt="McDollibee Logo"/>
+            <img src="/assets/mcdolibee_logo.png" alt="McDollibee Logo"/>
         </div>
         <div class="about-text reveal">
             <span class="section-tag">About Us</span>
@@ -238,7 +238,7 @@ $error = $_GET['error'] ?? '';
             <!-- ── LOGIN PANEL ── -->
             <div id="loginPanel" <?= $panel === 'register' ? 'class="hidden"' : '' ?>>
                 <div class="modal-brand">
-                    <img src="assets/mcdolibee_logo.png" alt="logo" class="modal-logo"/>
+                    <img src="/assets/mcdolibee_logo.png" alt="logo" class="modal-logo"/>
                     <span class="brand-text">Mc<span class="brand-yellow">Dollibee</span></span>
                 </div>
                 <h2 class="modal-title">Welcome Back!</h2>
@@ -285,7 +285,7 @@ $error = $_GET['error'] ?? '';
             <!-- ── REGISTER PANEL ── -->
             <div id="registerPanel" <?= $panel !== 'register' ? 'class="hidden"' : '' ?>>
                 <div class="modal-brand">
-                    <img src="assets/mcdolibee_logo.png" alt="logo" class="modal-logo"/>
+                    <img src="/assets/mcdolibee_logo.png" alt="logo" class="modal-logo"/>
                     <span class="brand-text">Mc<span class="brand-yellow">Dollibee</span></span>
                 </div>
                 <h2 class="modal-title">Create Account</h2>
