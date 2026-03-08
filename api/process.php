@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'databasehandler/dbh.php';
+require_once '/databasehandler/dbh.php';
 
 $action = $_POST['action'] ?? '';
 
@@ -33,7 +33,7 @@ if ($action === 'register') {
 
             $_SESSION['user_id']  = $pdo->lastInsertId();
             $_SESSION['username'] = $username;
-            header('Location: pages/dashboard.php');
+            header('Location: /pages/dashboard.php');
             exit;
         }
     }
